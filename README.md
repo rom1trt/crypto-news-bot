@@ -1,0 +1,102 @@
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/rom1trt/crypto-news-bot">
+    <img src="https://dhanjivpandey.com/wp-content/uploads/2021/03/twitterbot.png" alt="Logo" width="200" height="200">
+  </a>
+
+  <h3 align="center">Twitter Crypto News Bot</h3>
+
+  <p align="center">
+    An awesome bot that enables you to post and translate crypto-related news on your Twitter account.
+    <br />
+    <a href="https://github.com/rom1trt/crypto-news-bot"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/rom1trt/crypto-news-bot">View Demo</a>
+    ·
+    <a href="https://github.com/rom1trt/crypto-news-bot/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/rom1trt/crypto-news-bot/issues">Request Feature</a>
+  </p>
+</p>
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+Being French, I was looking for crypto daily news and analytics on French Twitter accounts in my feed. 
+However, except one or two news' sources, few accounts commented events on a daily basis as well as analyzed technical indicators.
+This is why I had an idea about a bot that scrapes and retrieves diverse data not only from several twitter accounts, but also from [CryptoPanic](https://cryptopanic.com).
+Aditionnally, the bot automatically translates the info in foreign languages using Deepl API.
+
+Here's why:
+* Your time should be focused on the most reliable and important news. A project that helps others being kept updated of this fast-paced crypto-world.
+* You shouldn't be doing the same tasks over and over like (re)tweeting and translating news and analytics.
+
+The bot is specifically tailored for my case (being French and chose my news' sources). I'll be adding more in the near future. 
+You may also suggest changes by forking this repo and creating a pull request or opening an issue.
+
+A list of commonly used resources that I found helpful.
+
+### Built With
+
+This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+* [Twitter API docs](https://www.deepl.com/docs-api/)
+* [Deepl API docs](https://developer.twitter.com/en/docs)
+* [Tweepy docs](https://docs.tweepy.org/en/latest/)
+* [Youtube](https://www.youtube.com)
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Installation
+
+1. Get a free API Key at [Deepl](https://www.deepl.com/)
+2. Get a free API Key at [Twitter](https://developer.twitter.com/en/docs)
+3. Clone the repository
+   ```sh
+   git clone https://github.com/rom1trt/crypto-news-bot.git
+   ```
+4. Install python packages (using pip)
+   ```sh
+   pip install tweepy
+   pip install pandas
+   ```
+5. Enter the corresponding API in `config_example.py`
+   ```sh
+   CRYPTOPANIC_API_KEY = '...................................' 
+   DEEPL_AUTH_KEY = '........................................' 
+   TWITTER_API_KEY = '...................................' 
+   TWITTER_API_PRIVATE_KEY = '.........................................' 
+   TWITTER_ACCESS_TOKEN = '...................................................' 
+   TWITTER_ACCESS_TOKEN_SECRET = '.............................................' 
+   ```
+ 6. Rename the `config_example.py` to `config.py`
+ 7. Run the `main.py` file
