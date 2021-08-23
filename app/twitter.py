@@ -128,7 +128,9 @@ class Twitter():
         if tweet.id != self.twitter_accounts[username]['last_tweet_id'] \
                 and not self.ignore_tweet(tweet.full_text):
             if self.twitter_accounts[username]['language'] == 'en':
-                translated_news = self.translation.translate(tweet.full_text)
+                translated_news = self.translation.translate_all(
+                    tweet.full_text
+                )
                 print("ID: {}".format(tweet.id))
                 print(tweet.full_text)
                 self.post_tweet(translated_news + f'\n(source: {username})')

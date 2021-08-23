@@ -13,7 +13,7 @@ from app.cryptopanic import CryptoPanic
 from app.twitter import Twitter, TwitterAccount
 from app.translation import Translation
 
-deepl = Translation(DEEPL_AUTH_KEY)
+translation_text = Translation(DEEPL_AUTH_KEY)
 
 twitter_accounts: Dict[str, TwitterAccount] = {
     'CoinTelegraph': TwitterAccount(
@@ -100,7 +100,7 @@ while LOOP1:
         if last_en_news != new_last_en_news:
             en_source = cryptopanic_en.get_last_source()
             print(new_last_en_news)
-            translated_news = deepl.translate(new_last_en_news)
+            translated_news = translation_text.translate_all(new_last_en_news)
             twitter.post_tweet(translated_news + "\n" + en_source)
             last_en_news = new_last_en_news
             boolean1 = True
