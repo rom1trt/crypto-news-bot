@@ -57,7 +57,7 @@ class CryptoPanic():
         if self.region == 'en':
             for i in range(self.number):
                 news_titles.append(
-                    self.translation.translate(
+                    self.translation.translate_all(
                         my_json_page["results"][i]['title']
                     )
                 )
