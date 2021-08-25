@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from app.config import MICROSOFT_AUTH_KEY
 import logging
 import time
 import tweepy
@@ -55,7 +56,9 @@ class Twitter:
             "jeux concours",
         ]
 
-        self.translation = Translation(auth_key=deepl_auth_key)
+        self.translation = Translation(
+            deepl_auth_key == deepl_auth_key, microsoft_auth_key=MICROSOFT_AUTH_KEY
+        )
 
     # INITIALIZE THE API'S CREATION
     def create_api(

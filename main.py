@@ -8,12 +8,15 @@ from app.config import (
     TWITTER_API_PRIVATE_KEY,
     TWITTER_ACCESS_TOKEN,
     TWITTER_ACCESS_TOKEN_SECRET,
+    MICROSOFT_AUTH_KEY,
 )
 from app.cryptopanic import CryptoPanic
 from app.twitter import Twitter, TwitterAccount
 from app.translation import Translation
 
-translation_text = Translation(DEEPL_AUTH_KEY)
+translation_text = Translation(
+    deepl_auth_key=DEEPL_AUTH_KEY, microsoft_auth_key=MICROSOFT_AUTH_KEY
+)
 
 twitter_accounts: Dict[str, TwitterAccount] = {
     "CoinTelegraph": TwitterAccount(
@@ -46,11 +49,17 @@ twitter = Twitter(
 )
 
 cryptopanic_fr = CryptoPanic(
-    api_key=CRYPTOPANIC_API_KEY, region="fr", deepl_auth_key=DEEPL_AUTH_KEY
+    api_key=CRYPTOPANIC_API_KEY,
+    region="fr",
+    deepl_auth_key=DEEPL_AUTH_KEY,
+    microsoft_auth_key=MICROSOFT_AUTH_KEY,
 )
 
 cryptopanic_en = CryptoPanic(
-    api_key=CRYPTOPANIC_API_KEY, region="en", deepl_auth_key=DEEPL_AUTH_KEY
+    api_key=CRYPTOPANIC_API_KEY,
+    region="en",
+    deepl_auth_key=DEEPL_AUTH_KEY,
+    microsoft_auth_key=MICROSOFT_AUTH_KEY,
 )
 
 LOOP1 = True

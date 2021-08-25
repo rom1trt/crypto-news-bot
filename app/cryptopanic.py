@@ -1,3 +1,4 @@
+from app.config import MICROSOFT_AUTH_KEY
 import json
 import requests
 import time
@@ -12,7 +13,7 @@ from app.translation import Translation
 GLOBAL_API_RATE_DELAY = 0.2
 
 
-class CryptoPanic():
+class CryptoPanic:
     """
     Class which interacts with the CryptoPanic API
     """
@@ -21,24 +22,29 @@ class CryptoPanic():
         self,
         api_key: str,
         deepl_auth_key: str,
-        region: str = 'fr',
+        microsoft_auth_key: str,
+        region: str = "fr",
         number: int = 2,
     ):
         """
         Handles URL variables for API POST
         """
-        self.translation = Translation(auth_key=deepl_auth_key)
+        self.translation = Translation(
+            deepl_auth_key=deepl_auth_key, microsoft_auth_key=MICROSOFT_AUTH_KEY
+        )
         self.number = number
         self.region = region
-        self.base_url = 'https://cryptopanic.com/api/v1/posts/?auth_token=' \
-            + f'{api_key}&public=true&kind=news'
-        self.url = self.base_url + f'&regions={self.region}'
+        self.base_url = (
+            "https://cryptopanic.com/api/v1/posts/?auth_token="
+            + f"{api_key}&public=true&kind=news"
+        )
+        self.url = self.base_url + f"&regions={self.region}"
 
-        supported_region = ['en', 'fr']
+        supported_region = ["en", "fr"]
         if region in supported_region:
-            self.url = self.base_url + f'&regions={region}'
+            self.url = self.base_url + f"&regions={region}"
         else:
-            print(f'Warning: Region {self.region} is not available')
+            print(f"Warning: Region {self.region} is not available")
 
     def get_whole_page(self):
         page = requests.get(self.url)
@@ -54,16 +60,14 @@ class CryptoPanic():
         news_titles = []
         my_json_page = self.get_whole_page()
 
-        if self.region == 'en':
+        if self.region == "en":
             for i in range(self.number):
                 news_titles.append(
-                    self.translation.translate_all(
-                        my_json_page["results"][i]['title']
-                    )
+                    self.translation.translate_all(my_json_page["results"][i]["title"])
                 )
-        elif self.region == 'fr':
+        elif self.region == "fr":
             for i in range(self.number):
-                news_titles.append(my_json_page["results"][i]['title'])
+                news_titles.append(my_json_page["results"][i]["title"])
 
         return news_titles
 
@@ -86,7 +90,7 @@ class CryptoPanic():
         Gathers sources and news titles
         Returns: Dictionary
         """
-        if self.region == 'en':
+        if self.region == "en":
             translated_news = self.get_news_titles(self.number)
         else:
             translated_news = self.get_news_titles(self.number)
@@ -104,9 +108,9 @@ class CryptoPanic():
         """
         news = self.get_news_titles(self.self.number)
         sources = self.get_source(self.self.number)
-        df = pd.DataFrame(news, columns=['News'])
+        df = pd.DataFrame(news, columns=["News"])
         # df['Translated News'] = translated_news
-        df['Sources'] = sources
+        df["Sources"] = sources
 
         return df
 

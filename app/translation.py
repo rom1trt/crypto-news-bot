@@ -4,12 +4,14 @@ import json
 import uuid
 from googletrans import Translator
 
+
 # TRANSLATE ANY ENGLISH NEWS TO FRENCH
 
 
 class Translation:
-    def __init__(self, auth_key: str):
-        self.auth_key = auth_key
+    def __init__(self, deepl_auth_key: str, microsoft_auth_key: str):
+        self.deepl_auth_key = deepl_auth_key
+        self.microsoft_auth_key = microsoft_auth_key
 
     def translate_deepl(self, text: str):
         """
@@ -18,10 +20,14 @@ class Translation:
         """
         r = requests.post(
             url="https://api-free.deepl.com/v2/translate",
-            data={"target_lang": "FR", "auth_key": self.auth_key, "text": f"{text}",},
+            data={
+                "target_lang": "FR",
+                "auth_key": self.deepl_auth_key,
+                "text": f"{text}",
+            },
         )
-        my_json = json.loads(r.text)
         try:
+            my_json = json.loads(r.text)
             len(my_json["translations"]) > 0
             return my_json["translations"][0]["text"]
         except Exception:
@@ -34,7 +40,6 @@ class Translation:
         """
 
         # Add your subscription key and endpoint
-        subscription_key = "8d6ab89f3bf84a91919c2c8102aab6d1"
         endpoint = "https://api.cognitive.microsofttranslator.com/"
 
         # Add your location, also known as region. The default is global.
@@ -48,7 +53,7 @@ class Translation:
         constructed_url = endpoint + path
 
         headers = {
-            "Ocp-Apim-Subscription-Key": subscription_key,
+            "Ocp-Apim-Subscription-Key": self.microsoft_auth_key,
             "Ocp-Apim-Subscription-Region": location,
             "Content-type": "application/json",
             "X-ClientTraceId": str(uuid.uuid4()),
