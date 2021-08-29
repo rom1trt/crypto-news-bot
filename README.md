@@ -100,3 +100,14 @@ To get a local copy up and running follow these simple example steps.
    ```
  6. Rename the `config_example.py` to `config.py`
  7. Run the `main.py` file
+
+### Docker
+
+You can also build thee dockerfile and make the program run in the background or on a virtual machine.
+
+```shell
+docker build . (name_of_file)
+```
+```shell
+docker run (name_of_image or image_id)
+```
