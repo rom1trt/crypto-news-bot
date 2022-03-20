@@ -64,6 +64,7 @@ A list of commonly used resources that I found helpful.
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+* [Python](https://www.python.org/)
 * [Twitter API docs](https://www.deepl.com/docs-api/)
 * [Deepl API docs](https://developer.twitter.com/en/docs)
 * [Tweepy docs](https://docs.tweepy.org/en/latest/)
