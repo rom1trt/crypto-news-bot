@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/rom1trt/crypto-news-bot">
-    <img align=top src="https://dhanjivpandey.com/wp-content/uploads/2021/03/twitterbot.png" alt="Logo" width="270" height="270">
+    <img align=top src="twitterbot.png" alt="Logo" width="270" height="270">
     <img align=top src="decryptofr.png" alt="Logo" width="400" height="400">
   </a>
 
