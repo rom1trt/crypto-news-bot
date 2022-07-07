@@ -67,6 +67,7 @@ A list of commonly used resources that I found helpful.
 * [![Twitter](https://img.shields.io/badge/twitter-blue?style=for-the-badge&logo=twitter&logoColor=white)](https://developer.twitter.com/en/docs)
 * [![Deepl](https://img.shields.io/badge/deepl-darkblue?style=for-the-badge&logo=deepl&logoColor=white)](https://www.deepl.com/docs-api/)
 * [![Youtube](https://img.shields.io/badge/youtube-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com)
+* [![Docker](https://img.shields.io/badge/docker-00bfff?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
 
 
 <!-- GETTING STARTED -->
