@@ -38,6 +38,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#license">License</a></li>
   </ol>
 </details>
 
@@ -62,12 +63,10 @@ A list of commonly used resources that I found helpful.
 
 ### Built With
 
-* [Python](https://www.python.org/)
-* [Twitter API docs](https://www.deepl.com/docs-api/)
-* [Deepl API docs](https://developer.twitter.com/en/docs)
-* [Tweepy docs](https://docs.tweepy.org/en/latest/)
-* [Youtube](https://www.youtube.com)
-
+* [![Python](https://img.shields.io/badge/python-c2a90f?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+* [![Twitter](https://img.shields.io/badge/twitter-blue?style=for-the-badge&logo=twitter&logoColor=white)](https://developer.twitter.com/en/docs)
+* [![Deepl](https://img.shields.io/badge/deepl-darkblue?style=for-the-badge&logo=deepl&logoColor=white)](https://www.deepl.com/docs-api/)
+* [![Youtube](https://img.shields.io/badge/youtube-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com)
 
 
 <!-- GETTING STARTED -->
@@ -111,3 +110,8 @@ docker build . (name_of_file)
 ```shell
 docker run (name_of_image or image_id)
 ```
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
