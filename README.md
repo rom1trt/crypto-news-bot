@@ -79,8 +79,9 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 
 1. Get a free API Key at [Deepl](https://www.deepl.com/)
-2. Get a free API Key at [Twitter](https://developer.twitter.com/en/docs)
-3. Clone the repository
+2. Get a free API Key at [CryptoPanic](https://cryptopanic.com/)
+3. Get a free API Key at [Twitter](https://developer.twitter.com/en/docs)
+4. Clone the repository
    ```sh
    git clone https://github.com/rom1trt/crypto-news-bot.git
    ```
@@ -99,7 +100,7 @@ To get a local copy up and running follow these simple example steps.
    TWITTER_ACCESS_TOKEN_SECRET = '.............................................' 
    ```
  6. Rename the `config_example.py` to `config.py`
- 7. Run the `main.py` file
+ 7. Run/modify the `main.py` file or create a new script
 
 ### Docker
 
