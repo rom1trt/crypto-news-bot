@@ -2,8 +2,8 @@
 <br />
 <p align="center">
   <a href="https://github.com/rom1trt/crypto-news-bot">
-    <img align=top src="twitterbot.png" alt="Logo" width="270" height="270">
-    <img align=top src="decryptofr.png" alt="Logo" width="400" height="400">
+    <img align=top src="img/twitterbot.png" alt="Logo" width="270" height="270">
+    <img align=top src="img/decryptofr.png" alt="Logo" width="400" height="400">
   </a>
 
   <h3 align="center">Twitter Crypto News Bot</h3>
